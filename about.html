@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width",initial-scale=1.0">
+        <title>University</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css1.css">
+    </head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="https://www.iconsdb.com/icons/preview/red/graduation-cap-xxl.png" alt=""></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hidemenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showmenu()"></i>
+        </nav>
+        <h1>About Us</h1>
+    </section>
+    <section class="about-us">
+        <div class="row">
+            <div class="about-col">
+                <h1>We are the world's largest University</h1>
+                <p>
+                    USA universities place great significance on diversity, meaning classes will consist of students of 
+                    different ages, religions and ethnicities. This provides a stimulating 
+                    and interesting learning atmosphere that motivates cross-cultural understanding and socialising.
+                    Most classes will have no more than 20 students and the faculty member will
+                     take the time to get to know students and their strengths. Interactive and practical 
+                     learning are the basis of American teaching. Professors are usually willing to 
+                     spend time outside of class to offer further support. Campuses in the US also offer 
+                     an active social life with many clubs and organisations for students to meet other students
+                      with similar interests and further career opportunities.
+                </p>
+                <a href="" class="hero-btn red-btn">Explore Now</a>
+            </div>
+            <div class="about-col">
+                <img src="https://images.unsplash.com/photo-1573165231977-3f0e27806045?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80.jpg">
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>Loren ipsum dolor sit amet,Consectetur adipiscing elit.
+            pellentesque aliquet turpis nulla,<br>Seliefied faucibus east
+            sollicitudin ut.maecenas uv vemeta ex,et dapibus purus 
+            donec sit.
+        </p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+            <i class="fa fa-google"></i>
+
+        </div>
+    </section>
+
+    <script>
+        var navLinks=document.getElementById("navLinks");
+        function showmenu(){
+            navLinks.style.right="0"
+        }
+        function hidemenu(){
+            navLinks.style.right="-200px"
+        }
+    </script>
+</body>
+</html>

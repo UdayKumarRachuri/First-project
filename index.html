@@ -1,0 +1,517 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width",initial-scale=1.0">
+        <title>University</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            *{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image:linear-gradient(rgba(177, 196, 248, 0.904),rgba(17, 17, 22, 0.7)),url(https://images.unsplash.com/photo-1583373834259-46cc92173cb7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80.jpeg);
+    background-position: center;
+    background-size:cover;
+    position: relative;
+    
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 150px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 13px;
+
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 40px;
+}
+.text-box p{
+    margin: 10px 0px 40px;
+    font-size: 14px;
+    color: #fff;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 0.9s;
+}
+nav .fa {
+    display: none;
+}
+@media(max-width:700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block; 
+    }
+    .nav-links{
+        position: fixed;
+        background: #f44336;
+        height: 100vh;
+        width: 150px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 5px ;
+    }
+
+}
+
+
+.course{
+    width: 100%;
+    max-resolution: auto;
+    text-align: center;
+    padding-top: 100px;
+
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+
+}
+p{
+    color:#777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.row{
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.course-col{
+    flex-basis: 31%;
+    background: #f7cccc;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: o.5s;
+
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px ;
+}
+.course-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,1,1);
+}
+@media(max-width:700px){
+    .row{
+        flex-direction: column;
+    }
+}
+.campus{
+    width: 100%;
+    max-resolution: auto;
+    text-align: center;
+    padding-top: 5px;
+}
+.campus-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.campus-col img{
+    width: 100%;
+    display: block;
+    background-size: cover;
+}
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.layer:hover{
+    background: rgba(208, 132, 238, 0.7);
+}
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color:black;
+    font-size: 20px;
+    bottom: 0;
+    left: 50%;
+    transform:translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+
+}
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+.facilities{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.facilities-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+
+}
+.facilities-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+.facilities-col p{
+    padding: 0;
+}
+.facilities-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+.testimonials{
+    width: 100%;
+    margin: auto;
+    text-align:center;
+    padding-top: 100px;
+}
+.testimonial-col{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #fff3f3;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+.testimonial-col img{
+    border-radius: 50px;
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+
+}
+.testimonial-col p{
+    padding: 0;
+    text-align: left;
+
+}
+.testimonial-col h3{
+    margin-top: 15px;
+    text-align: left;
+}
+.testimonial-col .fa{
+    color: #f44336;
+}
+@media(max-width:700px){
+    .testimonial-col img{
+        margin-left: 0px;
+        margin-right: 15px;
+    
+    }
+    .cta h1{
+        font-size: 18px;
+    }
+}
+.cta{
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(https://images.unsplash.com/photo-1492538368677-f6e0afe31dcc?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8dW5pdmVyc2l0eXxlbnwwfDB8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+.cta h1{
+    color: #fff;
+    margin-bottom: 40px;
+    padding: 0;
+}
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+
+}
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+.icons .fa{
+color: #f44336;
+margin: 0 13px;
+cursor: pointer;
+padding: 18px;
+}
+        </style>
+    </head>
+    <body>
+        <section class="header">
+            <nav>
+                <a href="index.html"><img src="https://www.iconsdb.com/icons/preview/red/graduation-cap-xxl.png" alt=""></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hidemenu()"></i>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="course.html">COURSE</a></li>
+                        <li><a href="blog.html">BLOG</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showmenu()"></i>
+            </nav>
+        <div class="text-box">
+            <h1>World's Biggest University</h1>
+            <p>making websites is noe one of the easiest thing in the world.you 
+                just need to learn HTML,CSS,<br>JS and you are good to go.
+            </p>
+            <a href="" class="hero-btn">Visit Us To Know More</a>
+        </div>
+        </section>
+
+
+        <section class="course">
+            <h1>Courses We Offer</h1>
+            <p>Loren ipsum dolor sit amet,Consectetur adipiscing elit.</p>
+
+            <div class="row">
+                <div class="course-col">
+                    <h3>Intermediate</h3>
+                    <p>
+                        Loren ipsum dolor sit amet,Consectetur adipiscing elit.
+                        pellentesque aliquet turpis nulla,eliefied faucibus east
+                        sollicitudin ut.maecenas uv vemeta ex,et dapibus purus 
+                        donec sit.
+                    </p>
+                </div>
+                <div class="course-col">
+                    <h3>Degree</h3>
+                    <p>
+                        Loren ipsum dolor sit amet,Consectetur adipiscing elit.
+                        pellentesque aliquet turpis nulla,eliefied faucibus east
+                        sollicitudin ut.maecenas uv vemeta ex,et dapibus purus 
+                        donec sit.
+                    </p>
+                </div>
+                <div class="course-col">
+                    <h3>Post Graduation</h3>
+                    <p>
+                        Loren ipsum dolor sit amet,Consectetur adipiscing elit.
+                        pellentesque aliquet turpis nulla,eliefied faucibus east
+                        sollicitudin ut.maecenas uv vemeta ex,et dapibus purus 
+                        donec sit.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="campus">
+            <h1>Our Global Campus</h1>
+            <p>Loren ipsum dolor sit amet,Consectetur adipiscing elit.</p>
+            <div class="row">
+                <div class="campus-col">
+                    <img src="https://images.unsplash.com/photo-1604136514790-b27086f6c36e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=375&q=80.jpg">
+                    <div class="layer">
+                        <h3>NALANDA</h3>
+                    </div>
+                </div>
+                <div class="campus-col">
+                    <img src="https://images.unsplash.com/photo-1524742177048-99c6c9df7fcf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=376&q=80.jpg">
+                    <div class="layer">
+                        <h3>VIKRAMSHILA</h3>
+                    </div>
+                </div>
+                <div class="campus-col">
+                    <img src="https://images.unsplash.com/photo-1588207131827-bda653909f10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60.jpg">
+                    <div class="layer">
+                        <h3>VALLABHI</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="facilities">
+            <h1>Our Facilities</h1>
+            <p>Loren ipsum dolor sit amet,Consectetur adipiscing elit.</p>
+            <div class="row">
+                <div class="facilities-col">
+                    <img src="https://images.unsplash.com/photo-1580537659466-0a9bfa916a54?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bGlicmFyeXxlbnwwfDF8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60.jpg">
+                    <h3>World Class Libray</h3>
+                    <p>pellentesque aliquet turpis nulla,eliefied faucibus east
+                        sollicitudin ut.maecenas uv vemeta ex,et dapibus purus 
+                        donec sit.
+                    </p>
+                </div>
+                <div class="facilities-col">
+                    <img src="https://images.unsplash.com/photo-1594960028854-87afdc93f12f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8cGxheWdyb3VuZHxlbnwwfDF8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60.jpg">
+                    <h3>Largest Play Ground</h3>
+                    <p>pellentesque aliquet turpis nulla,eliefied faucibus east
+                        sollicitudin ut.maecenas uv vemeta ex,et dapibus purus 
+                        donec sit.
+                    </p>
+                </div>
+                <div class="facilities-col">
+                    <img src="https://images.unsplash.com/photo-1486825586573-7131f7991bdd?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bGFib3JhdG9yeXxlbnwwfDF8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60.jpg">
+                    <h3>Highly Equiped Laboratory</h3>
+                    <p>pellentesque aliquet turpis nulla,eliefied faucibus east
+                        sollicitudin ut.maecenas uv vemeta ex,et dapibus purus 
+                        donec sit.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <h1>What Our Students Says</h1>
+            <p>Loren ipsum dolor sit amet,Consectetur adipiscing elit.</p>
+            <div class="row">
+                <div class="testimonial-col">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Mahesh_Babu_at_Selvandhan_Audio_Launch.jpg">
+                    <div>
+                        <p>Loren ipsum dolor sit amet,Consectetur adipiscing elit.
+                            pellentesque aliquet turpis nulla,eliefied faucibus east
+                            sollicitudin ut.maecenas uv vemeta ex,et dapibus purus 
+                            donec sit.
+                            <h3>Christine Berkley</h3>
+                        </p>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                </div>
+                <div class="testimonial-col">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Mahesh_Babu_in_Spyder_%28cropped%29.jpg">
+                    <div>
+                        <p>Loren ipsum dolor sit amet,Consectetur adipiscing elit.
+                            pellentesque aliquet turpis nulla,eliefied faucibus east
+                            sollicitudin ut.maecenas uv vemeta ex,et dapibus purus 
+                            donec sit.
+                            <h3>David Brey</h3> 
+                        </p>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+           <h1>Enroll for our various online courses<br> anywhere from the World</h1>
+           <a href="" class="hero-btn">CONTACT US</a>
+        </section>
+
+
+        <section class="footer">
+            <h4>About Us</h4>
+            <p>Loren ipsum dolor sit amet,Consectetur adipiscing elit.
+                pellentesque aliquet turpis nulla,<br>Seliefied faucibus east
+                sollicitudin ut.maecenas uv vemeta ex,et dapibus purus 
+                donec sit.
+            </p>
+            <div class="icons">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-linkedin"></i>
+                <i class="fa fa-google"></i>
+
+            </div>
+        </section>
+
+        <script>
+            var navLinks=document.getElementById("navLinks");
+            function showmenu(){
+                navLinks.style.right="0"
+            }
+            function hidemenu(){
+                navLinks.style.right="-200px"
+            }
+        </script>
+    </body>
+</html>
